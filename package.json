@@ -4,7 +4,7 @@
   "description": "一个基于react的webpack开发脚手架",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack --config build/webpack.config.dev.js"
+    "dev": "webpack --config config/webpack.config.dev.js"
   },
   "repository": {
     "type": "git",
@@ -31,6 +31,7 @@
   "dependencies": {
     "koa": "^2.5.1",
     "react": "^16.4.0",
-    "react-dom": "^16.4.0"
+    "react-dom": "^16.4.0",
+    "react-router-dom": "^4.3.1"
   }
 }
