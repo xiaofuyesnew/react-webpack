@@ -23,7 +23,7 @@
     "koa": "^2.5.1",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
-    "react-router": "^4.3.1"
+    "react-router-dom": "^4.3.1"
   },
   "scripts": {
     "dev": "webpack --config webpack.config.js --mode development",

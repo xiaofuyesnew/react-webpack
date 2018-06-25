@@ -1,11 +1,16 @@
 const path = require('path')
 const htmlWebpackPlugin = require('html-webpack-plugin')
 const cleanWebpackPlugin = require('clean-webpack-plugin')
-const miniCssExtractPlugin = require("mini-css-extract-plugin")
+const miniCssExtractPlugin = require('mini-css-extract-plugin')
 // const webpack = require('webpack')
 
 module.exports = {
   entry: {
+    vendor: [
+      'react',
+      'react-dom',
+      'react-router-dom'
+    ],
     app: './src/index.js'
   },
   output: {
@@ -22,10 +27,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [
-          miniCssExtractPlugin.loader,
-          'css-loader'
-        ]
+        use: [miniCssExtractPlugin.loader, 'css-loader']
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
@@ -37,16 +39,18 @@ module.exports = {
       },
       {
         test: /\.html$/,
-        use: [{
-          loader: 'html-loader',
-          options: {
-            minimize: true
+        use: [
+          {
+            loader: 'html-loader',
+            options: {
+              minimize: true
+            }
           }
-        }]
+        ]
       }
     ]
   },
-  devtool : 'cheap-module-eval-source-map',
+  devtool: 'cheap-module-eval-source-map',
   plugins: [
     new cleanWebpackPlugin(['dist/*']),
     new htmlWebpackPlugin({
