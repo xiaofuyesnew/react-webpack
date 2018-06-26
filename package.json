@@ -31,6 +31,7 @@
   },
   "scripts": {
     "dev": "webpack --config webpack.config.js --mode development",
-    "build": "webpack --config webpack.config.js --mode production"
+    "build": "webpack --config webpack.config.js --mode production",
+    "dev-server": "node ./server/server.dev.js"
   }
 }
